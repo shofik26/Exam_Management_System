@@ -1,0 +1,66 @@
+﻿@model Models.Organization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Organization Entry</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <h1>Organization Entry</h1>
+    <form method="POST">
+        <div class="container">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="Name" class="col-md-2">Name</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(c => c.Name, new {@class = "form-control"})
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Code" class="col-md-2">Code</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(c => c.Code, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Address" class="col-md-2">Address</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(c => c.Address, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Contact No" class="col-md-2">Contact No</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(c => c.ContactNo, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="About" class="col-md-2">About</label>
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(c => c.About, new {@class = "form-control"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Logo" class="col-md-2">Logo</label>
+                    <div class="col-md-10">
+                        <img src="Entity.cshtml" class="img-responsive"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="Submit" class="btn btn-primary col-md-offset-2"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

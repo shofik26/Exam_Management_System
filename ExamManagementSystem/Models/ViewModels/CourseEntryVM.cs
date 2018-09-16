@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
-namespace Models
+namespace Models.ViewModels
 {
-   public class Course
+    public class CourseEntryVM
     {
         public int Id { get; set; }
         public int OrganizationId { get; set; }
@@ -16,7 +17,8 @@ namespace Models
         public string Credit { get; set; }
         public string Outline { get; set; }
         public string Tags { get; set; }
-       public bool  IsDeleted { get; set; }
+        public bool IsDeleted { get; set; }
 
+        public List<SelectListItem> OrganizationLookUps { get; set; } 
     }
 }
