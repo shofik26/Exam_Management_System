@@ -12,6 +12,7 @@ namespace DatabaseContext
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Organization> Organizations { get; set; }
+
     }
 
 }

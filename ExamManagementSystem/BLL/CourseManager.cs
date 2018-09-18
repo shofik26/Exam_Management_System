@@ -35,5 +35,11 @@ namespace BLL
             List<Course> courses = _courseRepository.GetAll();
             return courses;
         }
+
+       public Course GetById(int id)
+       {
+           var course = _courseRepository.GetById(id);
+           return course;
+       }
     }
 }

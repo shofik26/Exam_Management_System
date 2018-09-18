@@ -26,5 +26,10 @@ namespace BLL
        {
            return _organizationRepository.GetAll();
        }
+
+       public List<Organization> GetAllorganization()
+       {
+           List<Organization> getAllOrganizations = _organizationRepository.GetAllOrganization();
+       }
     }
 }

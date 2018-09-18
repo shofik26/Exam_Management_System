@@ -9,7 +9,8 @@ namespace Models
 {
    public class Organization
     {
-        public int Id { get; set; }
+       public bool isDelete { get; set; }
+       public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

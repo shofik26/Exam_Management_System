@@ -26,9 +26,22 @@ namespace Repository
            return _dbCoctext.SaveChanges() > 0;
        }
 
+       public bool Delete(Organization organization)
+       {
+           organization.isDelete = true;
+           bool isUpdate = Update(organization);
+           return isUpdate;
+       }
        public List<Organization> GetAll()
        {
            return _dbCoctext.Organizations.ToList();
+       }
+
+       public List<Organization> GetAllOrganization()
+       {
+           List<Organization> organizations = _dbCoctext.Organizations.ToList();
+           return organizations;
+
        }
     }
 }

@@ -34,6 +34,8 @@ namespace ExamManagementSystem.Controllers
             model.OrganizationLookUps = _lookUp.GetOrganizations();;
             return View(model);
         }
+        
+        //Save course
         [HttpPost]
         public ActionResult Entry(CourseEntryVM model )
         {
@@ -46,10 +48,23 @@ namespace ExamManagementSystem.Controllers
                     return RedirectToAction("Index");
 
                 }
-            }
+            } 
             
             model.OrganizationLookUps = _lookUp.GetOrganizations();
             return View(model);
+        }
+        //Edit course
+        [HttpPost]
+        public ActionResult Edit(int id)
+        {
+        Course course = new Course()
+            ;
+            if (id>0)
+            {
+                course = _courseManager.GetById(id);
+            }
+            List<Organization> organizations = _orgnanizationManager.GetAllorganization();
+
         }
     }
 }

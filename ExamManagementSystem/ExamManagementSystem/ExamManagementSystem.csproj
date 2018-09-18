@@ -141,6 +141,10 @@
     <Content Include="Views\Course\Entry.cshtml" />
     <Content Include="Views\Organization\Entry.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\View1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
